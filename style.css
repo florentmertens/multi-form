@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 25%;
+  width: 100%;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+header p {
+  color: #ffffff60;
+  font-size: 1.25rem;
+}
+
+.icons {
+  grid-template-columns: repeat(11, 1fr);
+  min-height: 25%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons span {
+  height: 3px;
+  width: 100%;
+  background-color: #aaaaaa;
+}
+
+.media_query_max_600px {
+  display: none;
+}
+
+.icons .img_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #aaaaaa;
+  border-radius: 100%;
+  padding: 1.5vw;
+  width: 9vw;
+  height: 9vw;
+}
+
+.icons img {
+  width: 100%;
+  max-width: 45px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  padding: 20px 0;
+  height: 50%;
+}
+
+#form_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.form_input {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+
+.label {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 5px;
+}
+
+.label label {
+  color: #cfd1d4;
+  font-size: 1.15rem;
+}
+
+.form_input input {
+  border-radius: 20px;
+  outline: none;
+  padding: 0 0.5rem;
+  height: 1.75rem;
+  border: none;
+}
+
+form button {
+  width: fit-content;
+  background-color: #13b7cc;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin: 10px;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 730px) {
+  .form_input input {
+    width: 100%;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 600px) {
+  * {
+    font-size: 12px;
+  }
+
+  .icons {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .icons .img_container {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .media_query_max_600px {
+    display: inline;
+  }
+
+  form {
+    height: auto;
+  }
+
+  #form_container {
+    grid-template-columns: auto;
+  }
+
+  .form_input {
+    padding: 15px;
+  }
+}
