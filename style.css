@@ -55,6 +55,26 @@ header p {
   display: none;
 }
 
+span .progress.active {
+  display: block;
+  background-color: #13b7cc;
+  animation: span_animation 1s linear forwards;
+}
+
+@keyframes span_animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+span .progress.completed {
+  display: block;
+  background-color: #13b7cc;
+}
+
 .icons .img_container {
   display: flex;
   align-items: center;
@@ -64,6 +84,25 @@ header p {
   padding: 1.5vw;
   width: 9vw;
   height: 9vw;
+}
+
+.img_container.active {
+  animation: container_animation 2s 1s forwards;
+}
+
+@keyframes container_animation {
+  from {
+    background-color: transparent;
+    border-color: #aaaaaa;
+  }
+  to {
+    background-color: #13b7cc;
+    border-color: #13b7cc;
+  }
+}
+
+.img_container.completed {
+  border-color: #13b7cc !important;
 }
 
 .icons img {
