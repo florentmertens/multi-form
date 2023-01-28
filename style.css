@@ -61,6 +61,12 @@ span .progress.active {
   animation: span_animation 1s linear forwards;
 }
 
+span .progress.completed {
+  display: block;
+  background-color: #13b7cc;
+  animation: span_animation 1s linear forwards;
+}
+
 @keyframes span_animation {
   0% {
     width: 0;
@@ -68,11 +74,6 @@ span .progress.active {
   100% {
     width: 100%;
   }
-}
-
-span .progress.completed {
-  display: block;
-  background-color: #13b7cc;
 }
 
 .icons .img_container {
@@ -87,10 +88,10 @@ span .progress.completed {
 }
 
 .img_container.active {
-  animation: container_animation 2s 1s forwards;
+  animation: container_active_animation 2s 1s forwards;
 }
 
-@keyframes container_animation {
+@keyframes container_active_animation {
   from {
     background-color: transparent;
     border-color: #aaaaaa;
@@ -102,12 +103,41 @@ span .progress.completed {
 }
 
 .img_container.completed {
-  border-color: #13b7cc !important;
+  animation: container_completed_animation 2s 1s forwards;
+}
+
+@keyframes container_completed_animation {
+  from {
+    border-color: #aaaaaa;
+  }
+  to {
+    border-color: #13b7cc;
+  }
 }
 
 .icons img {
   width: 100%;
   max-width: 45px;
+}
+
+.icons img.active {
+  animation: img_animation 1s 1.5s forwards;
+}
+
+.icons img.completed {
+  animation: img_animation 1s 1.5s forwards;
+}
+
+@keyframes img_animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 form {
